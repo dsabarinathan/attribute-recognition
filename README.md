@@ -101,6 +101,20 @@ python inference.py --image_path path/to/your/image.jpg
 
 Replace `path/to/your/image.jpg` with the path to the image you want to analyze.
 
+### 5. Sample Results:
+
+##### Input image:
+
+![0028_c3s1_002001_02](https://github.com/dsabarinathan/attribute-recognition/assets/40907627/3b39e073-d39a-4174-8dca-ab152c0d10d9)
+
+#### Output: 
+
+```
+Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Color-Black',
+       'LowerBody-Type-Trousers&Shorts'], dtype='<U30'), 'prob': array([0.64786081, 0.61053316, 0.63944295, 0.85024354])}
+```
+
+
 ## Contributing
 
 We welcome contributions! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request.
