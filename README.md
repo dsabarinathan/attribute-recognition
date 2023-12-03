@@ -81,6 +81,8 @@ cd attribute-recognition
 
 Download the pre-trained model weights file from the releases section of this repository and place it in the `models/` directory.
 
+The pre-trained model weights can be downloaded from Google Drive. [Download Model](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)
+
 ### 3. Install Dependencies
 
 Install the required Python packages:
