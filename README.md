@@ -1,4 +1,9 @@
 # Person Attribute Recognition with Deep Learning
+[![License: GPL](https://img.shields.io/badge/License-GPL-yellow.svg)](https://opensource.org/licenses/GPL-3.0) ![By](https://img.shields.io/static/v1?label=By&message=PyTorch&color=red)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dsabarinathan/attribute-recognition&type=Date)](https://star-history.com/#dsabarinathan/attribute-recognition&Date)
 
 ## Overview
 
