@@ -73,7 +73,7 @@ The model is trained to recognize the following attributes:
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/yourusername/attribute-recognition.git
+git clone https://github.com/dsabarinathan/attribute-recognition.git
 cd attribute-recognition
 ```
 
