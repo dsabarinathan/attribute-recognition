@@ -78,6 +78,71 @@ def perform_inference(model, image_path):
 def get_label_from_index(index):
     return label_col[index]
 
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+# ... (previous code remains unchanged)
+
+def perform_inference_with_visualization(model, image_path, output_path):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    model.eval()
+
+    # Create an empty white image
+    white_image = np.ones((256, 256, 3), dtype=np.uint8) * 255
+
+    # Load the person image
+    person_image = cv2.imread(image_path)
+    person_image = cv2.cvtColor(person_image, cv2.COLOR_BGR2RGB)
+
+    # Resize the person image to fit within the white image
+    person_image = cv2.resize(person_image, (128, 64))
+
+    # Calculate the position to center the person image in the white image
+    y_offset = (256 - person_image.shape[0]) // 2
+    x_offset = (256 - person_image.shape[1]) // 2
+
+    # Place the person image on the white image
+    white_image[y_offset:y_offset + person_image.shape[0], x_offset:x_offset + person_image.shape[1]] = person_image
+
+    predicted_results = []
+
+    normalized_image = preprocess_image(image_path)
+    normalized_image_tensor = normalized_image.to(device)
+    normalized_image_tensor = normalized_image_tensor.unsqueeze(0)
+
+    with torch.no_grad():
+        output = model(normalized_image_tensor)
+
+    predicted_probs = output.cpu().numpy().astype(float)
+    predicted_probs = sigmoid(predicted_probs)
+
+    predicted_results = predicted_probs[0] > 0.5
+
+    pos = np.where(predicted_results == 1)[0]
+
+    labels = label_col[pos]
+    probs = predicted_probs[0][pos]
+
+    # Draw text labels on the image
+    for label, prob in zip(labels, probs):
+        text = f"{label}: {prob:.2f}"
+        cv2.putText(white_image, text, ( person_image.shape[0], person_image.shape[1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
+
+    # Display the result image
+    plt.imshow(white_image)
+    plt.axis('off')
+    plt.show()
+
+    # Save the result image
+    cv2.imwrite(output_path, cv2.cvtColor(white_image, cv2.COLOR_RGB2BGR))
+
+    return {"labels": labels, "prob": probs}
+
+# ... (main function remains unchanged)
+
+
 def main():
     parser = argparse.ArgumentParser(description='Perform inference on an image using a trained PyTorch model.')
     parser.add_argument('--model_path', type=str, default='./models/ResNet18_best_model.pth', help='Path to the trained PyTorch model file')
