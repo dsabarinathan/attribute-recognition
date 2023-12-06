@@ -108,12 +108,6 @@ Replace `path/to/your/image.jpg` with the path to the image you want to analyze.
 
 ### 5. Sample Results:
 
-| Model      | ROC AUC     | F1 Score     |
-|------------|-------------|--------------|
-| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  |
-| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     |
-
-
 ##### Input image:
 
 ![0028_c3s1_002001_02](https://github.com/dsabarinathan/attribute-recognition/assets/40907627/3b39e073-d39a-4174-8dca-ab152c0d10d9)
@@ -126,6 +120,12 @@ Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Co
 ```
 
 ### Pre-trained model 
+
+
+| Model      | ROC AUC     | F1 Score     |
+|------------|-------------|--------------|
+| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  |
+| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     |
 
 
 ## Contributing
