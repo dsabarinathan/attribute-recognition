@@ -119,7 +119,7 @@ Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Co
        'LowerBody-Type-Trousers&Shorts'], dtype='<U30'), 'prob': array([0.64786081, 0.61053316, 0.63944295, 0.85024354])}
 ```
 
-### Pre-trained model 
+### 6. Pre-trained model 
 
 
 | Model      | ROC AUC     | F1 Score     |
