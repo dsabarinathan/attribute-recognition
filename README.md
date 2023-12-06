@@ -122,10 +122,10 @@ Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Co
 ### 6. Pre-trained model 
 
 
-| Model      | ROC AUC     | F1 Score     |
-|------------|-------------|--------------|
-| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  |
-| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     |
+| Model      | ROC AUC     | F1 Score     | Model Type |
+|------------|-------------|--------------|--------------|
+| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  | Pytorch |
+| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     | Pytorch |
 
 
 ## Contributing
