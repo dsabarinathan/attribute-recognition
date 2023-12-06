@@ -9,6 +9,15 @@
 
 This repository contains a PyTorch implementation of a person attribute recognition model. The model has been trained to recognize various attributes such as age, gender, hair length, upper body features, lower body features, and accessories.
 
+## Pre-trained model 
+
+
+| Model      | ROC AUC     | F1 Score     | Model Type |
+|------------|-------------|--------------|--------------|
+| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  | Pytorch |
+| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     | Pytorch |
+
+
 ## Model Details
 
 The model is trained to recognize the following attributes:
@@ -118,14 +127,6 @@ Replace `path/to/your/image.jpg` with the path to the image you want to analyze.
 Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Color-Black',
        'LowerBody-Type-Trousers&Shorts'], dtype='<U30'), 'prob': array([0.64786081, 0.61053316, 0.63944295, 0.85024354])}
 ```
-
-### 6. Pre-trained model 
-
-
-| Model      | ROC AUC     | F1 Score     | Model Type |
-|------------|-------------|--------------|--------------|
-| [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  | Pytorch |
-| [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     | Pytorch |
 
 
 ## Contributing
