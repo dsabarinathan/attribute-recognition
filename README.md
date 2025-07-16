@@ -131,6 +131,27 @@ Predicted results: {'labels': array(['Age-Adult', 'Gender-Female', 'LowerBody-Co
 ```
 
 
+## 6. SwinPAR inference :
+You can download the pretrained swinPAR model for Person Attribute Recognition from Kaggle:
+
+🔗 [Download from Kaggle](https://www.kaggle.com/models/sabarinathan/hybrid-swinv2-mobilenetv2-person-attribute
+)
+```
+from swinPAR_inference import SwinPARInference
+
+inference = SwinPARInference('path/to/model.pth')
+result = inference.predict_single('image.jpg')
+print(result['positive_attributes'])
+```
+### Batch inference
+```
+results = inference.predict_batch(['img1.jpg', 'img2.jpg'])
+```
+### Visualization
+```
+inference.visualize_prediction('image.jpg', result, 'output.png')
+```
+
 ## Contributing
 
 We welcome contributions! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request.
