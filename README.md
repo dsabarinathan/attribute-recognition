@@ -16,6 +16,8 @@ This repository contains a PyTorch implementation of a person attribute recognit
 |------------|-------------|--------------|--------------|
 | [Resnet 18](https://drive.google.com/file/d/1lxdNB2Ix8bOOTxFeVVz2VcgPQMIuMQCZ/view?usp=sharing)  | 0.9221371   | 0.910283516  | Pytorch |
 | [Resnet 30](https://drive.google.com/file/d/1hQZQDu0x7ugBLm_bjisJO-oqHhMlaGEo/view?usp=sharing)  | 0.94394     | 0.943229     | Pytorch |
+| **SwiftPAR (Ours)** |           — |       0.9270 | PyTorch        |
+
 
 
 ## Model Details
